@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>函数执行方式--定时器回调函数</title>
+</head>
+<body>
+ <h5>函数执行方式--定时器回调函数执行</h5>    
+ <p>概述：在JavaScript语言当中，定时为回调函数回每隔一段时间执行一次</p>
+ <p>而定时器回调函数上下文为window；</p>
+ <p>定时器回调函数每隔一段事件执行一次</p>
+ <p>第一个参数：函数（称之为回调函数）</p>
+ <p>第二个参数：是一个数字（代表的是定时器间隔）单位MS</p>
+</body>
+</html>
+<script>
+setInterval(function(){
+	console.log(this);
+},1500);
+</script>

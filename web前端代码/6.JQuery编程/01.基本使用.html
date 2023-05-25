@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>JQuery基本使用</title>
+	<script src="./js/jQuery.min.js"></script>
+</head>
+<body>
+	<h1>JQuery函数基本使用</h1>
+	<ul>
+		<li>吃饭</li>
+		<li>睡觉</li>
+		<li>打豆豆</li>
+	<ul>
+	<div id="box">
+		我爱你祖国
+	</div>
+	<p class="cur">
+		祖国的花朵
+	</p>
+
+
+
+</body>
+</html>
+<script>
+	 //标签选择器
+console.log("标签选择器---li")	 
+console.log($("li"));
+console.log("id选择器---#box");
+console.log($("#box"));
+console.log("类选择器---.cur");
+console.log($(".cur"));
+ //如果向设置匹配标签的行内样式可以连续打点css函数
+$("p").css({
+   "color":"red",
+   "fontSize":30,
+   "background":"cyan",
+   "textAlign":"center"
+}
+ )
+
+
+</script>

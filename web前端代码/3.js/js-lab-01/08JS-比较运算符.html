@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>JS比较运算符</title>
+</head>
+<body>
+<h4>比较运算符</h4>	
+<div>
+	<p>概述：任意类型数据都可以参与比较运算符，比较最终结果：要么为布尔值true、要么为布尔值false
+       除了数字以外其他类型数据也可以参与比较运算符：但是需要隐式转换为数字参与（字符串特殊）
+   </p>
+   <p>比较运算符号说明</p>
+   <ol>
+   	 <li> 符号：>   含义 大于</li>
+     <li> 符号：>=  含义 大于等于</li>
+     <li> 符号：<   含义 小于</li>
+     <li> 符号：<=  含义 小于等于</li>
+     <li> 符号：==  含义 相等判断（就看数值是否一样）</li>
+     <li> 符号：!=  含义 不等</li>
+     <li> 符号：=== 含义 全等（看数值+看数据类型)</li>
+     <li> 符号：!== 含义 不全等</li>
+   </ol>
+</div>
+<h4>1.数字比较</h4>
+<div>
+  <p>注意：</p>
+  <p>一个等号：赋值运算符   不是进行比较运算符（常用语给变量赋值）</p>
+  <p>两个等号：相等比较运算符      (只看数值是否一样)</p>
+  <p>三个等号：全等比较  （即看数值又看类型比较）</p>
+</div>
+<h4>2.其他类型数据比较（除字符串外）</h4>
+<div>
+  <p>概述：其他类型数据也可以参与比较（数字、字符串除去），其他类型数据也可以参与比较运算符，
+  但是需要隐式转换为数字参与。
+</p>
+</div>
+<h4>3.字符串比较<h4>
+<h5>3.1.字符串与数字比较</h5>
+<p>概述：如果是字符窜和数字比较：字符串隐式转换为数字参与比较；</p>
+<h5>3.2.字符串和字符串进行比较</h5>
+<p>概述：如果是字符串和字符串进行表：通过的是ASCII码数值进行比较：
+两个字符串都是从左到右有一个一个字符进行比较：知道某一个字符比较出结果，比较结束了；
+0-9<A-Z<a-z:从左到右依次变大
+</p>
+
+
+
+
+</body>
+</html>
+<script>
+  console.log("数字比较=======================");
+  console.log(" 3 > 6 ", 3 > 6);
+  console.log("3 >= 6", 3 >= 6);
+  console.log("3 < 6 ", 3 < 6);
+  console.log("6/3 = ",3 == 3);
+  console.log("3 != 3",3 != 3);
+  console.log("数字与字符串比较",3 === "3");
+  console.log("3 !== 3 ",3 !== 3);
+  console.log("其他类型数据比较（除字符串外）=======================");
+
+ console.log("100 > true ",100 > true);
+ console.log("true == 1",true == 1);
+ console.log("true < false", true < false);
+ console.log("NaN > 100", NaN > 100);
+ console.log("undefined ",undefined > 100);
+ console.log("66666 > null ",666 > null);
+ console.log("字符串与数字比较=======================");
+ console.log("66" > 99);
+ console.log("33" > 12);
+ console.log("33" == 33);
+ console.log("33" === 33);
+ console.log("字符串与字符串比较=======================");
+ console.log("a2" > "A2");
+ console.log("b2a" > "ABC");
+ console.log("李四" == "李四")
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DOM属性--基本使用</title>
+</head>
+<body>	
+	<h4>1.概述</h4>
+   <div>
+     <p>DOM【全称：document object model】起始就是系统内置引用类型对象document，你可以认为他是整个节点树‘根元素’</p>
+     <p>JS当中DOM对象可以通过一些手段操作结构层中标签。</p>
+   </div>
+ </br>
+  <h4>2.DOM四个小属性</h4>
+  <div>
+    <ol>
+      <li>documentElement属性：可以获取页面中HTML标签</li>
+      <li>head属性:可以获取到head标签</li>
+      <li>body属性：可以获取到body标签</li>
+      <li>title属性：可以操作title标签文本</li>
+    </ol>
+  </div>
+</body>
+</html>
+<script>
+console.log("=====document======");
+console.log(document);
+console.log("=====document type======");
+console.log(typeof document);
+console.log("=====document documentElement======");
+console.log(document.documentElement);
+console.log("=====document head======");
+console.log(document.head);
+console.log("=====document body======");
+console.log(document.body);
+console.log("=====document title======");
+console.log(document.title);
+</script>

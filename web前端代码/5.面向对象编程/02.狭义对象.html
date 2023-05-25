@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>对象</title>
+</head>
+<body>
+ <h5>对象</h5>    
+ <p>概述：前端工程师中也有面向对象编程概念(基于面向对象编程),在JS当中对象分为两种</p>
+ <ol>
+     <li>狭义对象</li>
+     <li>广义对象</li>
+ </ol>
+ <h5>狭义对象</h5>
+ <p>概述：在JS当中狭义对象用一个大花括号表示{}；狭义对象可以拥有很多属性和方法；</p>
+ <p>狭义对象可以拥有属性、方法（区分开：属性值为函数称之为方法，否则称之为属性）</p>
+ <p>记住：JS当中对象才可以通过点语法动态添加属性和方法</p>
+ <h5>广义对象</h5>
+ <p>
+     概述：如果是引用类型数据，且系统提供内置属性和方法的对象，称之为广义对象
+ </p>
+
+ <h5>广义对象--函数</h5>
+ <div>
+     <p>JS当中：五个基本数据类型：数字、字符串、布尔、未定义、空对象</p>
+     <p>引用类型数据:Object</p>
+     <p>函数即为广义对象：因为有一些系统内置属性、方法提供给我们使用</p>
+     <p>name:系统提供内置属性，可以获取函数名字/p>
+     <p>ength：系统提供内置属性，可以获取函数形参个数</p>
+ </div>
+
+
+
+
+</body>
+</html>
+<script>
+     //狭义对象:使用大花括号表示
+    var obj = {
+    name:"jack",
+    age:18,
+    sex:"man",
+    eat:function(){
+    console.log("test object");
+  }
+}
+//检测当前对象类型
+console.log(typeof obj);
+console.log(obj.name);
+console.log(obj.age);
+console.log(obj.sex);
+console.log(obj.eat);
+//重新修改属性值
+obj.name = "tom";
+obj.age = 2;
+obj.sex = "woman";
+obj.color = "red";
+obj.test=function(){
+    console.log("test2......")
+}
+console.log("============================");
+obj.eat();
+obj.eat();
+obj.test();
+
+console.log("=========广义对象 函数===================");
+function People(a, b, c){
+
+}
+console.log(People.name);
+console.log(People.length);
+People.nick = "jack2";
+People.age = 18;
+People.sex = "man";
+console.log(People.nick);
+
+
+
+</script>

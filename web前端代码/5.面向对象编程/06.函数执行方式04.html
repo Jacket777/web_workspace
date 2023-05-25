@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>函数执行方式--函数作为数组元素枚举出来执行</title>
+</head>
+<body>
+ <h5>函数作为数组元素枚举出来执行</h5>    
+ <p>概述：函数作为数组元素枚举出来执行，函数的上下文为当前数组。</p>
+</body>
+</html>
+<script>
+ var arr= [1,2,3,4,5,
+    function(){
+    	console.log("我是数组里面的函数----我执行了");
+    	this.reverse();
+    },6,7,8,9,10];
+
+    //枚举出函数执行
+    arr[5]();
+    console.log(arr);
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>函数执行方式--函数名加小括号</title>
+</head>
+<body>
+ <h5>函数名加小括号</h5>    
+ <p>概述：函数名+小括号执行，函数体中上下文为window[即为BOM对象：浏览器对象]</p>
+ <p>BOM【browser object model】浏览器对象模型:在模拟浏览器,函数名+小括号执行，函数上下文即为BOM【内置window对象】</p>
+</body>
+</html>
+<script>
+function fun(){
+	console.log(this);
+}
+
+fun();
+
+
+</script>

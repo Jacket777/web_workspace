@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DOM属性--操作标签样式</title>
+</head>
+<body>	
+	<h4>1.概述</h4>
+   <div>
+     <p>DOM【全称：document object model】起始就是系统内置引用类型对象document，你可以认为他是整个节点树‘根元素’</p>
+     <p>JS当中DOM对象可以通过一些手段操作结构层中标签。</p>
+   </div>
+ </br>
+  <h4>2.操作标签样式</h4>
+  <p>概述：我们通过DOM可以操作标签的行内样式。</p>
+  <p>区分web样式：Link:称之为外部样式，Style：称之为内部样式</p>
+  <p>DOM能操作的只是标签的行内样式（外部样式、内部样式暂时操作不了）</p>
+  <p>样式中属性带有横杠变为驼峰写法</p>
+  <p>该有单位需要有单位</p>
+
+</br>
+<div style="width:100px; height: 100px; color:blueviolet; border:1px solid black;" id="cur">12306</div>
+
+
+</body>
+</html>
+<script>
+  //
+  var div = document.getElementById("cur");
+  console.log(div.style.width);
+  console.log(div.style.height)
+  console.log(div.style.color);
+  console.log(div.style.border);
+
+  //设置元素样式
+  div.style.width = "250px";
+  div.style.color = "red";
+
+  div.style.fontSize = "30px";
+  div.style.textAlign = "center";
+  div.style.background = "cyan";
+
+
+
+
+</script>

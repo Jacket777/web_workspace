@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>JS中循环使用--continue练习</title>
+</head>
+<body>	
+	<h4>1.概述</h4>
+	<p>概述：在JavaScript脚本语言中也有函数概念，函数其实就是将某一个功能进行封装，当你事先用这个功能的时候，需要调用、执行这个函数</p>
+	<p>比如：我们在前面课程当中学习过一些内置函数</p>
+	<p>内置函数alert：这个功能是在浏览器正上方弹出一个警告框</p>
+	<p>内置函数prompt:这个功能是在浏览器正上方弹出一个提示框</p>
+	<p>
+	比如他们使用的时候：函数名字+小括号</br>
+    在javaScript脚本语言当中：函数使用也是分为两部分：声明+调用</br>
+    注意：函数在JS当中声明方式有两种：关键字function声明函数、表达式声明函数</br>
+    </p>
+
+	<h4>2.JS当中没有函数重载概念</h4>
+	<p>概述：在JS当中如果有多个重名的函数，永远是后者覆盖前者，没有函数重载问题</p>
+	<p>函数声明一次可以多次使用</p>
+    <div>
+    	<p>实例代码<p>
+    	<p>
+function fun(a,b){</br>
+	console.log(a);</br>
+	console.log(b);</br>
+	var c = "test";</br>
+}</br>
+fun(true,"test");</br>
+   </p>
+  </div>
+</body>
+</html>
+<script>
+	function fun(a){
+		console.log("我是第一个");
+	}
+
+	function fun(a,b){
+		console.log("我是第二个");
+	}
+
+	function fun(a, b, c){
+		console.log("我是第三个");
+	}
+
+	fun("测试")
+
+
+
+</script>

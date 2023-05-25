@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>四叶子草</title>
+	<style type="text/css">
+/* 默认样式清除 */
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .box{
+              /*相对定位  */
+              position: relative;//相对自己起始位置进行便宜，起始位置占用（别人不能用）
+              width:520px;
+              height: 280px;
+              border:1px solid red;//外边框【外边框大小设置 实线 颜色设置】
+              left:400px;  //定位元素才有left、top、right bottom
+              top:100px;
+              /* 如果子元素超出父元素部分隐藏*/
+              overflow: hidden;  //子元素超出父元素部分：隐藏掉
+        }
+        ul{
+             position: absolute;
+             list-style: none;//去除列表默认样式（前面黑色小球）
+             width:520px;
+             height: 280px;
+        }
+        .leftbtn{
+             position:absolute;//绝对定位：按照已经定位父元素进行便宜
+             width:60px;
+             height:30px;
+             background:black;
+             left:0px;
+             top:120px;
+             color:white;
+             text-align:center;//文本居中
+             line-height:30px;//行高设置（让蚊子垂直方向居中：一般和高度一样）
+             cursor:pointer;//小手
+             opacity: .8;//透明【0~1】
+        }
+        .rightbtn{
+             position: absolute;
+             width:60px;
+             height: 30px;
+             background:black;
+             right:0px;
+             top:120px;
+             color:white;
+             text-align:center;
+             line-height:30px;
+             cursor:pointer;
+             opacity: .8;
+        }
+        ol{
+             position: absolute;
+             width:200px;
+             height:25px;
+             list-style: none;
+             left:35%;
+             bottom:5px;
+        }
+        /* 后代选择器 */
+        ol li{
+            float:left;//左侧浮动
+            width:25px;
+            height: 25px;
+            background:black;
+            color:white;
+            /* 变为圆球 */
+            border-radius:12.5px;圆角设置【左上、右上、右下、左下】
+            text-align:center;
+            line-height:25px;
+            margin-right:5px;
+        }
+        .cur{
+             background:skyblue;
+             /* 进行缩放 */
+             transform:scale(1.2);
+        }
+
+
+	</style>
+</head>
+<body>
+<div class="box">
+           <!--有序列表去做显示图片  -->
+             <ul>
+                  <li><img src="1.jpg" alt="" /></li>
+                  <li><img src="1.jpg" alt="" /></li>
+                  <li><img src="1.jpg" alt="" /></li>
+                  <li><img src="1.jpg" alt="" /></li>
+                  <li><img src="1.jpg" alt="" /></li>
+             </ul>
+             <!-- 做左右按钮 -->
+             <div class="leftbtn">left</div>
+             <div class="rightbtn">right</div>
+             <!-- 分页器 -->
+             <ol>
+                 <li class="cur">1</li>
+                 <li>2</li>
+                 <li>3</li>
+                 <li>4</li>
+                 <li>5</li>
+             </ol>
+     </div>
+</body>
+</html>

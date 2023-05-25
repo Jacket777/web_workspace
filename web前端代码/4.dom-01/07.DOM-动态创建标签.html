@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DOM--动态创建标签</title>
+</head>
+<body>
+<ul id="box">
+	
+</ul>	
+
+</body>
+</html>
+<script>
+//先获取UL标签
+var ul = document.getElementById("box");
+for(var i = 0; i <10;i++){
+	var li = document.createElement("li"); //创建标签
+	li.innerHTML = i; //给标签赋值文本
+	ul.appendChild(li);
+}
+
+var h = document.createElement("h4")
+h.innerHTML = "test4";
+document.body.appendChild(h);
+//document.appendChild(h);
+</script>

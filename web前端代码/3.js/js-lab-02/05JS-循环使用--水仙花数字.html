@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>JS中循环使用--水仙花数字</title>
+</head>
+<body>	
+	<h4>1.概述</h4>
+	<p>JavaScript脚本语言当中也有循环【loop】语句，可以做一些重复事情</br>
+	   它也有for、while、do.while</p>
+
+	<h4>2.循环使用---水仙花数字</h4>
+    <div>
+    	<p>实例代码<p>
+    	<p>
+for (var i = 100; i < 1000; i++) { </br>
+  //分别获取当前数字的个位数，十位数，百位数</br>
+  var ge = i%10,</br>
+      shi = parseInt(i/10)%10;</br>
+      bai = parseInt(i/100);</br>
+      //计算数字累加和
+  var result = Math.pow(ge,3)+Math.pow(shi,3)+Math.pow(bai,3);</br>
+  if( i == result){</br>
+    console.log(i +"水仙花数字");</br>
+  }</br>
+}</br>
+   </p>
+  </div>
+</body>
+</html>
+<script>
+//for循环
+for (var i = 100; i < 1000; i++) {
+  //分别获取当前数字的个位数，十位数，百位数
+  var ge = i%10,
+      shi = parseInt(i/10)%10;
+      bai = parseInt(i/100);
+      //计算数字累加和
+  var result = Math.pow(ge,3)+Math.pow(shi,3)+Math.pow(bai,3);
+  if( i == result){
+    console.log(i +"水仙花数字");
+  }
+}
+</script>

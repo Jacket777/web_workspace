@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>函数执行方式--函数作为狭义对象方法执行</title>
+</head>
+<body>
+ <h5>函数作为狭义对象方法执行</h5>    
+ <p>概述：函数作为狭义对象方法执行，谁最后打点函数的上下文即为谁.</p>
+</body>
+</html>
+<script>
+//狭义对象
+var person = {
+    name:"jack",
+    age:18,
+    sex:"man",
+    eat:function(){
+        console.log(this.name+"can do something");
+    }
+}
+
+person.eat();
+
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>JS变量使用</title>
+</head>
+<body>
+<h6>JS变量使用</h6>	
+<div>
+	<p>0.概述：变量（variable）来源于数学,变量相当于是一个容器，变量可以存储数据、存储计算完结果；通过访问变量名字获取到存储数据。</p>
+  <p>JavaScript当中变量使用</p>
+ <ol>
+  <li>第一步：用关键字var 声明变量      var 变量名字</li>
+  <li>第二步：给变量进行赋值            变量名字 = 123；</li>
+  <li>第三步：使用变量                 console.log(变量名字)</li>
+ </ol>
+</div>
+ <p>1.JS当中变量只是用关键字var声明但为赋值，默认初始undefined</p>
+ <p>2.JS当中变量 可以声明一次、但是可以多次赋值</p>
+ <p>3.多次赋值以后在使用：使用的是最后一次赋值数据</p>
+</body>
+</html>
+<script>
+  //第一步：用关键字var进行声明变量
+  var num;
+   //第二步：可以给变量进行赋值 （将右侧数据||计算完结果）赋值给左侧变量
+  num = 123;
+  //第三步：使用 通过访问变量名字、获取到对应存储数据
+  console.log(num);
+  //--------------------
+  var abc;
+  console.log("abc value"+abc);
+  abc = 123;
+  abc = "美国";
+  abc = "日本";
+  console.log(abc);
+
+  var a = 100;
+  var b = 200;
+  var c = 300;
+  console.log(a, b, c);
+</script>

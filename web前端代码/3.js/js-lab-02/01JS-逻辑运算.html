@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>JS逻辑运算</title>
+</head>
+<body>	
+	<h4>0.概述</h4>
+	<p>概述：在JavaScript脚本语言当中也有所谓逻辑运算符【与、或、非】，任意类型数据都可以参与逻辑运算符，</br>
+	但是需要注意（除了布尔值以外数据）需要隐式转换为布尔值参与逻辑运算符（通过内置函数Boolean将其他类型数据转换为布尔值）</p>
+	<h4>1.逻辑与</h4>
+	<p>概述：在JS当中使用两个&&代表逻辑与。两者（A、B）同时为真，返回结果才为真，否则结果为假的。
+     书写语法格式：A&&B	
+	</p>
+	<h4>2.逻辑或</h4>
+	<p>概述：在JS当中使用两个||代表逻辑或。两者有一个为真即为真，否则为假的</p>
+	<p>语法格式:A||B</p>
+
+	<h4>2.逻辑非</h4>
+	<p>概述：JS当中逻辑非！，它的作用是置反</p>
+	<p>JS当中的逻辑非可以同时使用多个</p>
+
+    <h4>3.其他类型数据参与逻辑运算</h4>
+    <div>
+    	<p>1.数字隐式转换为布尔值</p>
+    	<ol>
+    		<li>数字： 0            布尔值：False</li>
+    		<li>数字： NaN          布尔值：False</li>
+    		<li>数字：非0、NaN数字   布尔值:true</li>
+    	</ol>
+    </div>
+    <div>
+    	<p>2.字符串隐式转换为布尔值</p>
+    	<ol>
+    		<li>空字符串           布尔值：False</li>
+    		<li>非空字符串         布尔值：True</li>
+    	</ol>
+    </div>
+    <div>
+    	<p>3.未定义类型和空对象类型</p>
+    	<ol>
+    		<li>undefined    布尔值：False</li>
+    		<li>null         布尔值：False</li>
+    	</ol>
+    </div>
+</body>
+</html>
+<script>
+	console.log("逻辑与=================");
+	console.log(false && true);
+	console.log(false && false);
+	console.log(true && true);
+	console.log("逻辑或=================");
+	console.log(false || true);
+	console.log(true || false);
+	console.log(false || false);
+	console.log(true || true);
+	console.log("逻辑非=================");
+	console.log(!true);
+	console.log(!false);
+	console.log(!!!true);
+	console.log("其他类型数据参与逻辑运算=================");
+	console.log(1&&0);
+	console.log(6666&&9999);
+	console.log(NaN&&34);
+	console.log("张三"&&"李四");
+	console.log("小明"&&"小花");
+	console.log(NaN || 123);
+
+
+
+
+</script>

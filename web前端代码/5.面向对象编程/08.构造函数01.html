@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>构造函数</title>
+</head>
+<body>
+ <h5>函数作为狭义对象方法执行</h5>    
+ <p>概述：在JavaScript语言当中也有所谓构造函数【constructor】，JS当中构造函数要符合如下两个特征：</p>
+ <ol>
+    <li>函数名字首个英文字母一般需要大写【不是决定形因素】</li>
+    <li>构造函数务必、必须、一定是一个关键字new调用的【决定形因素】</li>
+</ol>
+<p>认知关键字new：它也是调用函数一种方式</p>
+</body>
+</html>
+<script>
+function fun(){
+    console.log("do something.......");
+}
+new fun;
+new fun;
+new fun;
+
+</script>

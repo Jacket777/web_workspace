@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>构造函数---Prototype</title>
+</head>
+<body>
+ <h5>构造函数基本使用----原型</h5>    
+ <p>概述：在前端工程师世界当中，构造函数就是所谓‘类’，通过四步走出来的狭义对象，称之为‘实例’</p>
+ <ol>
+    <li>任意构造函数天生都有一个prototype属性，指向一个空的狭义对象</li>
+    <li>实例天生拥有一个__proto__属性，向上面的狭义对象借用方法使用</li>
+</ol>
+<p>认知关键字new：它也是调用函数一种方式</p>
+<p>构造函数也是一个函数，以前函数能做的构造函数也能在【循环、条件】</p>
+<p>只不过构造函数可以捎带脚返回一个狭义对象而已</p>
+
+</body>
+</html>
+<script>
+
+
+function Dog(name,age){
+	this.name = name;
+	this.age =age;
+}
+Dog.prototype.doSth = function(){
+	console.log("do something ");
+}
+var dog1 = new Dog("tom01",19);
+console.log(dog1);
+dog1.doSth();
+
+
+
+</script>

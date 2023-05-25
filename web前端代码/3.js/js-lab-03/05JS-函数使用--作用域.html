@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>JS中循环使用--continue练习</title>
+</head>
+<body>	
+	<h4>1.概述</h4>
+	<p>概述：在JavaScript脚本语言中也有函数概念，函数其实就是将某一个功能进行封装，当你事先用这个功能的时候，需要调用、执行这个函数</p>
+	<p>比如：我们在前面课程当中学习过一些内置函数</p>
+	<p>内置函数alert：这个功能是在浏览器正上方弹出一个警告框</p>
+	<p>内置函数prompt:这个功能是在浏览器正上方弹出一个提示框</p>
+	<p>
+	比如他们使用的时候：函数名字+小括号</br>
+    在javaScript脚本语言当中：函数使用也是分为两部分：声明+调用</br>
+    注意：函数在JS当中声明方式有两种：关键字function声明函数、表达式声明函数</br>
+    </p>
+
+	<h4>2.关键字函数基本使用</h4>
+	<p>概述：JS当中如果想声明关键字形式函数，需要用到关键字function进行声明。</p>
+	<p>函数声明一次可以多次使用</p>
+    <div>
+    	<p>实例代码<p>
+    	<p>
+function fun(a,b){</br>
+	console.log(a);</br>
+	console.log(b);</br>
+	var c = "test";</br>
+}</br>
+fun(true,"test");</br>
+   </p>
+  </div>
+</body>
+</html>
+<script>
+//作用域书写代码范围
+//称之为全局作用域
+console.log(123);
+//函数也有作用域概念
+function fun(a, b){
+    console.log(a);
+    console.log(b);
+}
+fun(5,6);
+
+
+var b = 100;
+ function fun1(){
+ 	var b = 200;
+ 	console.log(b);
+ }
+ fun1();
+
+
+</script>

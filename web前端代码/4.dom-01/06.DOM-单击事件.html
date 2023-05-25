@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DOM事件</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    #box{
+      width: 600px;
+      height: 100px;
+      margin: 100px auto;
+      background: red;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+    }
+    #box1{
+           /* 定位元素 */
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background: cyan;
+      left: 0px;
+    }
+
+    #box2{
+      width: 300px;
+      height: 100px;
+      background: pink;
+    }
+
+  </style>
+
+</head>
+<body>	
+	<h4>1.概述</h4>
+   <div>
+     <p>概述：事件英文【event】，事件是由用户触发，当用户触发事件的时候，标签可以做出相应的响应。
+     比如：用户触发单击事件、鼠标移上、鼠标移下.......
+    </p>
+    <p>语法格式：element.onxxxx = function(){}</p>
+    <p>红色这个函数：称之为事件处理函数（当用户触发事件的时候才会执行一次）</p>
+   </div>
+ </br>
+  <h4>2.单击事件-onclick</h4>
+  <p>概述：你可以给任意标签绑定单击事件（当用户触发单击事件的时候），事件处理函数才会执行一次。</p>
+</br>
+ <div id = "box">文字</div>
+ <div id ="box1"></div>
+ <div id = "box2"></div>
+</body>
+</html>
+<script>
+  //获取标签
+  var div = document.getElementById("box");
+  var div1 = document.getElementById("box1");
+  var div2 = document.getElementById("box2");
+  //全局变量，存储一个起始字号大小
+  var f = 16;
+  var w = 600;
+  //绑定单击事件
+  div.onclick = function(){
+    f++;//字号加1
+    w += 5;
+    div.style.fontSize =  f + "px";
+    div.style.width =  w +"px";
+  }
+
+
+  var L = 0;
+  div1.onclick = function(){
+    L += 10;
+    div1.style.left = L + "px";
+  }
+
+
+  div2.onclick = function(){
+    //随机得到三个数字
+    var R = parseInt(Math.random()*255);
+    var G = parseInt(Math.random()*255);
+    var B = parseInt(Math.random()*255);
+    div2.style.background = `rgb(${R},${G},${B})`
+  }
+
+</script>

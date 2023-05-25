@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>JS数学运算符--数字参与</title>
+</head>
+<body>
+<h5>数学运算符</h5>	
+<div>
+	<p>概述：数学运算符即为： 加、减、乘、除、取余数。在JS当中任意类型数据都可以参与数学运算符。</br>
+    除了数字以为其他类型数据需要隐式转换为数字参与数学运算符。
+  </p>
+</div>
+<h5>1.数字参与</h5>
+<div>
+  <p>概述：如果是数字参与数学运算符：运算符口诀和小学学习是一模一样的</p>
+  <p>查看控制台与页面源码校验</p>
+</div>
+<h5>2.布尔参与</h5>
+<div>
+  <p>概述：在JS当中布尔值类型数据也可以参与数学运算符，布尔值参与数学运算符，</br>
+   计算机底层自动隐式转换为数字参与。（底层完成隐式转换为起始通过系统内置函数Number完成）</p>
+   <p>布尔类型数据参与数学运算符：隐式转换为数字 true=>1  false=>0</p>
+   <p>查看控制台与页面源码校验</p>
+</div>
+<h5>3.未定义类型参数</h5>
+<div>
+  <p>概述：未定义类型是数值也可以参与数学运算符，需要隐式转换为数字NaN【not a number】</p>
+  <p>NaN:是JS语言当中一个数字类型特殊值，一般进行数学运算符的时候，计算不出结果，返回数字NaN；</p>
+  <p>总结：未定义类型数据也可以参数数学运算符，但是需要隐式转换为数字NaN参与</p>
+  <p>NaN是数字类型一个特殊值：这个数字进行数学运算的时候都是计算不出结果（NaN）</p>
+</div>
+
+<h5>4.空对象参与</h5>
+<div>
+  <p>概述：空对象类型数据null，也可以参与数学运算符，但是需要隐式转换为数字参与数学运算符；</p>
+  <p>NaN:是JS语言当中一个数字类型特殊值，一般进行数学运算符的时候，计算不出结果，返回数字NaN；</p>
+  <p>总结：未定义类型数据也可以参数数学运算符，但是需要隐式转换为数字NaN参与</p>
+  <p>NaN是数字类型一个特殊值：这个数字进行数学运算的时候都是计算不出结果（NaN）</p>
+</div>
+
+<h5>5.小总结</h5>
+<div>
+  <p>概述：任意类型数据都可以参与数学运算符：如果不是数字类型的，隐式转换（浏览器自动）为数字参与</p>
+</div>
+
+<h5>6.字符串参与</h5>
+<div>
+  <p>概述:字符串也可以参与数学运算符，但是它有一些特殊</p>
+  <p>注意1：符串也可以参数数学运算符：但加号比较特殊，如果加号遇见字符串称之为连字符：将数据从左到右拼接为字符串</p>
+  <p>注意2：如果减、乘、除、取余数字符串参与：都隐式转换为数字参与</p>
+</div>
+
+
+
+</body>
+</html>
+<script>
+  //数学运算符------数字参与
+  //如果是数字和数字进行数学运算符：
+  //先算乘除、后算加减、如果有小括号先算小括号里面的
+  console.log("数字参与=======================")
+  console.log("66+22 = ", 66+22);
+  console.log("66-33 = ", 66-33);
+  console.log("22*22 = ", 22*22);
+  console.log("6/3 = ",6/3);
+  console.log("99%3 = ",99%3);
+  console.log("布尔参与=======================")
+
+  console.log("Number(true) = ", Number(true));
+  console.log("Number(false) = ", Number(false));
+  console.log("true+99 = ",true+99);
+  console.log("false*100 = ",false*100);
+
+    //在JS当中未定义类型数据undefined也可以参数学运算符：
+    //但是要隐式转换为数字参与
+    //undefined未定义类型数据参与数学运算符的时候会隐式转换为数字NaN
+    /************************************************************/
+    //NaN起始也是数字类型数值：值不够这个数值比较特殊，一般在计算数学运算符的时候算不出结果的时候
+    //返回数字NaN
+  console.log("未定义类型参数=====================")
+  console.log("0/0 = ", 0/0);
+  console.log("typeof NaN is",typeof NaN);
+  console.log("NaN + 33 = ",NaN+33);
+  console.log("NaN * 33 = ",NaN*33);
+  console.log("NaN + NaN = ",NaN+NaN);
+  console.log("undefined + 33 = ",undefined + 33);
+  console.log("undefined /33 = ", undefined/33);
+
+  console.log("空对象类参与=====================");
+  console.log("Number(null) = ",Number(null));
+  console.log("null * 99 =",null*99);
+  console.log("0 + NaN = ",0+NaN);
+  console.log("null + NaN = ",null+NaN);
+
+  console.log("字符串加号","张三" + 66)
+  console.log("张三" + "李四");
+  //如果是字符串参与数学运算符：减、乘、除、取余数
+  console.log("66" / 66);
+  console.log("小红红" * "小兰兰");
+
+
+
+</script>

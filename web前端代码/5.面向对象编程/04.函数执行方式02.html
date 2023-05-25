@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>函数执行方式--作为事件处理函数执行</title>
+	<style>
+	div{
+	width:400px;
+	height:200px;
+	background-color:black;
+    }
+  </style>
+</head>
+<body>
+ <h5>函数执行方式--作为事件处理函数执行</h5>    
+ <p>概述：函数作为事件处理函数执行，函数的上下文即为触发事件的当前标签。</p>
+ <div id = "box"></div>
+</body>
+</html>
+<script>
+//1.获取div标签
+var div = document.getElementById("box");
+//2.绑定单击事件
+div.onclick = function(){
+	//函数体中上下文
+	this.style.background = "red";
+}
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" id="box">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DOM属性--基本使用</title>
+</head>
+<body>	
+	<h4>1.概述</h4>
+   <div>
+     <p>DOM【全称：document object model】起始就是系统内置引用类型对象document，你可以认为他是整个节点树‘根元素’</p>
+     <p>JS当中DOM对象可以通过一些手段操作结构层中标签。</p>
+   </div>
+ </br>
+  <h4>2.DOM方法</h4>
+  <p>如果想获取其他页面中标签：需要通过一些方法获取，DOM方法很多</p>
+  <p>getElementById：DOM这个方法可以通过标签的ID选择器匹配任意节点树上标签。</p>
+  <p>Script标签一般放置程序最下方（因为加载先后书序问题）</p>
+</br>
+<div>
+  <ul id ="box1">
+    <li>A</li>
+    <li id="box2">B</li>
+    <li>C</li>
+  </ul>
+</div>
+</body>
+</html>
+<script>
+console.log("=====get box======");
+var meta = document.getElementById("box");
+console.log(meta);
+//获取ul标签
+console.log("=====ul======");
+var ul = document.getElementById("box1");
+console.log(ul);
+//获取li标签
+console.log("=====li======");
+var li = document.getElementById("box2")
+console.log(li);
+
+</script>
